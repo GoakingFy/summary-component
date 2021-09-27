@@ -1,0 +1,155 @@
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+    --FSP: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--paleBlue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-position: top;
+}
+
+.container_card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 650px;
+    overflow: hidden;
+    background-color: var(--VeryPaleBlue);
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+#ilustration {
+    height: 200px;
+}
+
+.container_summary h2 {
+    margin: 25px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container_summary p {
+    font-size: var(--FSP);
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: var(--DesaturedBlue);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.annual_plan {
+    position: relative;
+    height: 100px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+#icon_music {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.text_plan {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.text_plan b {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+}
+
+.text_plan p {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    color: var(--DesaturedBlue);
+}
+
+.annual_plan button {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    color: var(--BrightBlue);
+    cursor: pointer;
+}
+
+#btn_pay {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    margin: 5px;
+    color: var(--VeryPaleBlue);
+    background-color: var(--BrightBlue);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+#btn_cancel {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    color: var(--DesaturedBlue);
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+#btn_pay:hover {
+    background-color: #630EFF;
+}
+
+#btn_cancel:hover {
+    color: var(--DarkBlue);
+}
+
+.annual_plan button:hover {
+    text-decoration: none;
+}
+
+#waves {
+    transform: rotate(180deg);
+}
+
+@media screen and (min-width:1440px) {
+    .container_card {
+        width: 400px;
+    }
+    #btn_pay {
+        width: 330px;
+    }
+}
